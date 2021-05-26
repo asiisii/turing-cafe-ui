@@ -13,6 +13,10 @@ class App extends Component {
     }
   }
 
+  addNewReservation = reservation => {
+    this.setState({reservations: [reservation, ...this.state.reservations]})
+  }
+
   componentDidMount = () => {
     getReservations()
       .then(data => this.setState({reservations: data}))
@@ -26,7 +30,7 @@ class App extends Component {
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-          <Form />
+          <Form addNewReservation={this.addNewReservation}/>
         </div>
         <div className='resy-container'>
           {!reservations && !error && <h1>Loading...</h1>}
