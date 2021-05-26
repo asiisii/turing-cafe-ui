@@ -26,6 +26,7 @@ export default class Form extends React.Component {
           placeholder='Name'
           required
           value={this.state.name}
+          onChange={e => this.handleChange(e)}
         />
         <input
           className='date'
@@ -34,6 +35,7 @@ export default class Form extends React.Component {
           placeholder='Date (mm/dd)'
           required
           value={this.state.date}
+          onChange={e => this.handleChange(e)}
         />
         <input
           className='time'
@@ -42,6 +44,7 @@ export default class Form extends React.Component {
           placeholder='Time (hh:mm)'
           required
           value={this.state.time}
+          onChange={e => this.handleChange(e)}
         />
         <input
           className='number'
@@ -49,7 +52,8 @@ export default class Form extends React.Component {
           name='number'
           placeholder='Number of guests'
           required
-          value={this.state.name}
+          value={this.state.number}
+          onChange={e => this.handleChange(e)}
         />
         <button>Make reservation</button>
       </>
