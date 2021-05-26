@@ -25,10 +25,12 @@ class App extends Component {
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-          <Reservations reservations={reservations} />
         </div>
         <div className='resy-container'>
-          
+          {!reservations && !error && <h1>Loading...</h1>}
+          {reservations && !error &&
+          <Reservations reservations={reservations} />
+          }
         </div>
       </div>
     )
