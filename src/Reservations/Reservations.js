@@ -6,10 +6,19 @@ export default function Reservations({reservations}) {
   console.log(reservations);
   const cards = reservations.map(reservation => {
     return (
-      <Card />
+      <Card 
+        key={reservation.id}
+        id={reservation.id}
+        name={reservation.name}
+        date={reservation.date}
+        time={reservation.time}
+        number={reservation.number}
+      />
     )
   })
   return (
-    <h1>{cards}</h1>
+    <div>
+      {cards}
+    </div>
   )
 }
