@@ -15,7 +15,39 @@ export default class Form extends React.Component {
   render() {
     return (
       <>
-        <h1>In form</h1>
+        <input
+          className='name'
+          type='text'
+          name='name'
+          placeholder='Name'
+          required
+          value={this.state.name}
+        />
+        <input
+          className='name'
+          type='text'
+          name='name'
+          placeholder='Name'
+          required
+          value={this.state.name}
+        />
+        <input
+          className='name'
+          type='text'
+          name='name'
+          placeholder='Name'
+          required
+          value={this.state.name}
+        />
+        <input
+          className='name'
+          type='text'
+          name='name'
+          placeholder='Name'
+          required
+          value={this.state.name}
+        />
+        <button>Make reservation</button>
       </>
     )
   }
