@@ -6,7 +6,7 @@ export default function Card({name, date, time, number}) {
     <div>
       <p>{name}</p>
       <p>{date}</p>
-      <p>{time}</p>
+      <p>{time} pm</p>
       <p>Number of guests: {number}</p>
     </div>
   )
