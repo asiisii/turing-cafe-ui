@@ -24,26 +24,26 @@ export default class Form extends React.Component {
           value={this.state.name}
         />
         <input
-          className='name'
+          className='date'
           type='text'
-          name='name'
-          placeholder='Name'
+          name='date'
+          placeholder='Date (mm/dd)'
           required
-          value={this.state.name}
+          value={this.state.date}
         />
         <input
-          className='name'
+          className='time'
           type='text'
-          name='name'
-          placeholder='Name'
+          name='time'
+          placeholder='Time (hh:mm)'
           required
-          value={this.state.name}
+          value={this.state.time}
         />
         <input
-          className='name'
-          type='text'
-          name='name'
-          placeholder='Name'
+          className='number'
+          type='number'
+          name='number'
+          placeholder='Number of guests'
           required
           value={this.state.name}
         />
