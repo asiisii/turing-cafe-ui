@@ -5,9 +5,11 @@ import './Reservations.css'
 export default function Reservations({reservations}) {
   console.log(reservations);
   const cards = reservations.map(reservation => {
-    console.log(reservation);
+    return (
+      <Card />
+    )
   })
   return (
-    <h1>hi</h1>
+    <h1>{cards}</h1>
   )
 }
