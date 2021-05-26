@@ -20,7 +20,6 @@ class App extends Component {
   componentDidMount = () => {
     getReservations()
       .then(data => this.setState({reservations: data}))
-      .then(() => console.log(this.state.reservations))
       .catch(() => this.setState({error: 'Oops something went wrong!'}))
   }
 
