@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import getReservations from '../apiCalls'
 import './App.css';
 
 class App extends Component {
@@ -9,6 +10,14 @@ class App extends Component {
       error: ''
     }
   }
+
+  componentDidMount = () => {
+    getReservations()
+      .then(data => this.setState({reservations: data}))
+      .then(() => console.log(this.state.reservations))
+      .catch(() => this.setState({error: 'Oops something went wrong!'}))
+  }
+
   render() {
     return (
       <div className="App">
