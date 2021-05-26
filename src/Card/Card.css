@@ -1,0 +1,9 @@
+.card {
+  border: 2px solid #017E7F;
+  background-color: white;
+  color: #017E7F;
+}
+
+.name {
+  font-weight: bolder;
+}
