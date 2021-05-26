@@ -17,7 +17,7 @@ export default function Reservations({reservations}) {
     )
   })
   return (
-    <div>
+    <div className='wrapper'>
       {cards}
     </div>
   )
