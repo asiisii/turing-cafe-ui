@@ -40,4 +40,28 @@ describe('Homepage', () => {
 
     })
   })
+
+  describe.only('Input', () => {
+    it('should have value on inputs when typed', () => {
+      cy.get('input.name')
+        .type('Ashish')
+        .should('have.value', 'Ashish')
+        .get('input.date')
+        .type('9/4')
+        .should('have.value', '9/4')
+        .get('input.time')
+        .type('11:00')
+        .should('have.value', '11:00')
+        .get('input.number')
+        .type('2')
+        .should('have.value', '2')
+        
+    })
+  })
+
+  // describe('User Flow', () => {
+  //   it('should have value on inputs when typed', () => {
+      
+  //   })
+  // })
 })
