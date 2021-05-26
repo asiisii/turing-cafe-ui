@@ -16,6 +16,15 @@ export default class Form extends React.Component {
     this.setState({[e.target.name] : e.target.value})
   }
 
+  makeReservation = e => {
+    e.preventDefault()
+    const newReservation = {
+      id: new Date().valueOf(),
+      ...this.state
+    }
+    console.log(newReservation);
+  }
+
   render() {
     return (
       <>
@@ -55,7 +64,7 @@ export default class Form extends React.Component {
           value={this.state.number}
           onChange={e => this.handleChange(e)}
         />
-        <button>Make reservation</button>
+        <button onClick={e => this.makeReservation(e)}>Make reservation</button>
       </>
     )
   }
