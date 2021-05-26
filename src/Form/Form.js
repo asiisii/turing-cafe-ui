@@ -22,7 +22,7 @@ export default class Form extends React.Component {
       id: new Date().valueOf(),
       ...this.state
     }
-    console.log(newReservation);
+    this.props.addNewReservation(newReservation)
   }
 
   render() {
